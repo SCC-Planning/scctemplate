@@ -1,5 +1,5 @@
 # Variables ------
-package_name <- "scctemplates"
+package_name <- "scctemplate"
 
 # Functions ------------
 
