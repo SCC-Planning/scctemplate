@@ -2,11 +2,9 @@
 title: "Example Page"
 author: "`r as.character(Sys.info()[7])`"
 date: "`r Sys.Date()`"
-sgtemplates:
+scctemplate:
   header:
     site_branding: "Suffolk County Council"
-  metadata:
-    label: "Report"
   navigation:
     breadcrumb_trail:
       - href: "index.html"
@@ -14,6 +12,8 @@ sgtemplates:
       - text: "Example Page"
     toc:
       sticky: false
+      numbered: false
+      
 ---
 
 ```{r setup, include = FALSE}

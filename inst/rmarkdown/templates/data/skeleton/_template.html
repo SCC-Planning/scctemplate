@@ -61,6 +61,33 @@
 							</i>
 						</a>
 					</div>
+					<!-- Navbar -->
+					<div class="hidden-md hidden-lg navbar-collapse collapse" id="navbar" aria-expanded="true">
+						<ul class="nav navbar-nav" role="menu">
+
+							<li class="dropdown" role="menuitem">
+								<a href="/children-families-and-learning/" aria-expanded="false" role="button"
+									data-toggle="dropdown" class="dropdown-toggle">
+									Children, families and learning
+									<span class="i-wrapper">
+										<i class="fa fa-plus"></i>
+										<i class="fa fa-minus"></i>
+									</span>
+								</a>
+
+								<ul role="menu" class="dropdown-menu">
+
+									<li role="menuitem">
+										<a href="/children-families-and-learning/schools/" title="Schools">
+											Schools
+										</a>
+
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+
 				</div>
 			</div>
 		</div>
@@ -154,7 +181,7 @@
 					<div class="section-navigation hidden-xs hidden-sm">
 						<nav class="section-menu">
 							$if(toc_float)$
-							<div id="TOC" class="collapse section-menu"></div>
+							<div id="TOC" class="collapse"></div>
 							$else$
 							$toc$
 							$endif$
@@ -164,6 +191,38 @@
 			</div>
 		</div>
 		<!--End of Page Content-->
+	</div>
+
+	<!-- Other pages in section -->
+	$if(navbar)$
+	<div class="other-pages page-section">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h2>
+
+						All pages on this website
+
+					</h2>
+				</div>
+			</div>
+		</div>
+
+		<div class="container section-pages">
+			<div class="row">
+			</div>
+		</div>
+
+		<div class="container section-pages">
+			<div class="row">
+				$for(navbar)$
+				<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+					$navbar$
+				</div>
+				$endfor$
+			</div>
+		</div>
 	</div>
 
 	<!-- Footer -->
@@ -221,4 +280,30 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="embedded-scripts">
+
+
+		<!-- Navbar -->
+		$if(navbar)$
+		<script>
+			// Manage active state of menu based on current page
+			$$(document).ready(function () {
+				// Active menu anchor
+				href = window.location.pathname
+				href = href.substr(href.lastIndexOf('/') + 1)
+				if (href === "")
+					href = "index.html";
+				var menuAnchor = $$('a[href="' + href + '"]');
+
+				// Mark it active
+				menuAnchor.parent().addClass('active');
+
+				// If it's got a parent navbar menu, mark it active as well
+				menuAnchor.closest('li.dropdown').addClass('active');
+			});
+		</script>
+		$endif$
+	</div>
+
 </body>

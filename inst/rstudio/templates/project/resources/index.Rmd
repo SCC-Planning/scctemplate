@@ -1,5 +1,6 @@
 ---
 title: "Home"
+description: "Your website's homepage"
 author: "`r as.character(Sys.info()[7])`"
 scctemplate:
   header:
@@ -7,8 +8,6 @@ scctemplate:
   navigation:
     breadcrumb_trail:
       - text: "Home"
-    toc:
-      sticky: false
   seo:
     description: "SEO (search engine optimisation) description"
     keywords: "SEO, keywords, comma, separated"
