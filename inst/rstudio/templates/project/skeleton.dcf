@@ -1,0 +1,6 @@
+Title: Suffolk County Council Website
+Binding: site_skeleton
+Subtitle: Create a simple R Markdown website with the Suffolk County Council's website style.
+Caption: Create an R Markdown website with Suffolk County Council's style
+OpenFiles: _site.yml, *.Rmd
+Icon: scc_logo.png

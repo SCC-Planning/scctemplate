@@ -1,0 +1,18 @@
+name: "Example Suffolk County Council Website"
+title-prefix: "suffolk.gov.uk"
+navbar:
+  left:
+    - text: "Home"
+      href: "index.html"
+    - text: "Example"
+      href: "example.html"
+output:
+  html_document:
+    code_download: false
+    fig_caption: true
+    number_sections: true
+    self_contained: false
+    template: "_template.html"
+    toc: true
+    toc_depth: 2
+    toc_float: false

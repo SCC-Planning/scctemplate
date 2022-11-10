@@ -1,0 +1,19 @@
+---
+title: "Home"
+author: "`r as.character(Sys.info()[7])`"
+scctemplate:
+  header:
+    site_branding: "Suffolk County Council"
+  navigation:
+    breadcrumb_trail:
+      - text: "Home"
+    toc:
+      sticky: false
+  seo:
+    description: "SEO (search engine optimisation) description"
+    keywords: "SEO, keywords, comma, separated"
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```

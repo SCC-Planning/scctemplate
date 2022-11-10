@@ -34,7 +34,7 @@
 	<link rel="stylesheet" href="template_libs/scc/css/bootstrap-theme.css" media="screen" type="text/css" />
 	<link rel="stylesheet" href="template_libs/scc/css/print-styles.css" type="text/css" />
 
-	<!-- $if(scctemplate.navigation.toc.sticky)$
+	$if(scctemplate.navigation.toc.sticky)$
 	<style type="text/css">
 		@media (min-width: 768px) {
 			.content-page-wrapper .page-content .right-column .section-navigation {
@@ -43,46 +43,66 @@
 			}
 		}
 	</style>
-	$endif$ -->
+	$endif$
 
 </head>
 
 <!-- Page top section -->
 <!-- Header -->
-<div class="site-header" aria-label="Header" role="Header">
-
-	<div class="hidden-print">
-		<div class="container header-menu">
-			<div class="row header-row">
-				<div class="col-xs-8 col-sm-10 col-md-6 col-lg-8 site-logo">
-					<a href="/" title="Suffolk County Council">
-						<i class="sccicon sccicon-no-border sccicon-suffolk-county-council">
-							Suffolk County Council
-						</i>
-					</a>
+<header>
+	<div class="site-header" aria-label="Header" role="Header">
+		<div class="hidden-print">
+			<div class="container header-menu">
+				<div class="row header-row">
+					<div class="col-xs-8 col-sm-10 col-md-6 col-lg-8 site-logo">
+						<a href="/" title="Suffolk County Council">
+							<i class="sccicon sccicon-no-border sccicon-suffolk-county-council">
+								Suffolk County Council
+							</i>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
 </header>
 
 <body>
 	<a name="content"></a>
 	<div class="content-page-wrapper" id="scc-page-wrapper">
 
+		<!-- Breadcrumbs Wrapper-->
+		$if(scctemplate.navigation.breadcrumb_trail)$
 		<div class="breadcrumbs-wrapper">
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-lg-12">
 						<div class="breadcrumbs">
+							<ul>
+								$for(scctemplate.navigation.breadcrumb_trail)$
+								<li>
+									$if(scctemplate.navigation.breadcrumb_trail.href)$
+									<a class="breadcrumb-1" href="$scctemplate.navigation.breadcrumb_trail.href$">
+										$endif$
+										$if(scctemplate.navigation.breadcrumb_trail.text)$
+										$scctemplate.navigation.breadcrumb_trail.text$
+										$else$
+										$scctemplate.navigation.breadcrumb_trail$
+										$endif$
+										$if(sgtemplates.navigation.breadcrumb_trail.href)$
+									</a>
+									$endif$
+								</li>
+								$endfor$
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		$endif$
 
+		<!-- Page intro, title, author etc -->
 		<div class="page-intro">
 			<div class="container">
 				<div class="row">
@@ -94,9 +114,15 @@
 						$endif$
 
 						$if(subtitle)$
-						<h3 style="text-align:left;">
+						<h2 style="text-align:left;">
 							$subtitle$
-						</h3>
+						</h2>
+						$endif$
+
+						$if(description)$
+						<p class="text-align:left;">
+							$description$
+						</p>
 						$endif$
 
 						$if(author)$
@@ -109,11 +135,13 @@
 						</dd>
 						$endfor$
 						$endif$
+
 					</div>
 				</div>
 			</div>
 		</div>
 
+		<!-- Page Content -->
 		<div class="container page-content">
 			<div class="row">
 				<!-- Main Body -->
@@ -124,7 +152,6 @@
 				<!-- Contains automatically-generated table of contents -->
 				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 right-column hidden-print hidden-xs hidden-sm">
 					<div class="section-navigation hidden-xs hidden-sm">
-
 						<nav class="section-menu">
 							$if(toc_float)$
 							<div id="TOC" class="collapse section-menu"></div>
@@ -136,7 +163,7 @@
 				</div>
 			</div>
 		</div>
-		<!--END SCC PAGE CONTENT-->
+		<!--End of Page Content-->
 	</div>
 
 	<!-- Footer -->
@@ -171,7 +198,8 @@
 							</li>
 
 							<li>
-								<a href="https://www.suffolk.gov.uk/about/terms-and-conditions/" title="Terms and conditions">
+								<a href="https://www.suffolk.gov.uk/about/terms-and-conditions/"
+									title="Terms and conditions">
 									Terms and conditions
 								</a>
 							</li>
