@@ -1,13 +1,7 @@
 ---
 title: "Untitled"
 date: "`r Sys.Date()`"
-sgtemplates:
-  datatables:
-    features:
-      info: true
-      ordering: true
-      paging: true
-      searching: false
+scctemplates:
   header:
     phase_banner:
       tag: "WIP"
