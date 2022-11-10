@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,18 +33,19 @@
 	<link rel="stylesheet" href="template_libs/scc/css/bootstrap.css" media="screen" type="text/css" />
 	<link rel="stylesheet" href="template_libs/scc/css/bootstrap-theme.css" media="screen" type="text/css" />
 	<link rel="stylesheet" href="template_libs/scc/css/print-styles.css" type="text/css" />
-</head>
 
-$if(scctemplate.navigation.toc.sticky)$
-<style type="text/css">
-	@media (min-width: 768px) {
-		nav.ds_side-navigation {
-			position: sticky;
-			top: 16px;
+	<!-- $if(scctemplate.navigation.toc.sticky)$
+	<style type="text/css">
+		@media (min-width: 768px) {
+			.content-page-wrapper .page-content .right-column .section-navigation {
+				position: sticky;
+				top: 16px;
+			}
 		}
-	}
-</style>
-$endif$
+	</style>
+	$endif$ -->
+
+</head>
 
 <!-- Page top section -->
 <!-- Contains: Notifications; header; navigation elements (except breadcrumbs) -->
@@ -70,10 +70,71 @@ $endif$
 </header>
 
 <body>
-	<div class="container page-content">
-		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 left-column">
-				$body$
+	<a name="content"></a>
+	<div class="content-page-wrapper" id="scc-page-wrapper">
+
+		<div class="breadcrumbs-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-lg-12">
+						<div class="breadcrumbs">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="page-intro">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						$if(title)$
+						<h1 style="text-align:left;">
+							$title$
+						</h1>
+						$endif$
+
+						$if(subtitle)$
+						<h3 style="text-align:left;">
+							$subtitle$
+						</h3>
+						$endif$
+
+						$if(author)$
+						<dt class="text-align:left;">
+							Authors
+						</dt>
+						$for(author)$
+						<dd class="text-align:left;">
+							$author$
+						</dd>
+						$endfor$
+						$endif$
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container page-content">
+			<div class="row">
+				<!-- Main Body -->
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 left-column">
+					$body$
+				</div>
+				<!-- Sidebar -->
+				<!-- Contains automatically-generated table of contents -->
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 right-column hidden-print hidden-xs hidden-sm">
+					<div class="section-navigation hidden-xs hidden-sm">
+
+						<nav class="section-menu">
+							$if(toc_float)$
+							<div id="TOC" class="collapse section-menu"></div>
+							$else$
+							$toc$
+							$endif$
+						</nav>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
