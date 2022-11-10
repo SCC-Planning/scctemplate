@@ -51,27 +51,10 @@ $endif$
 <!-- Contains: Notifications; header; navigation elements (except breadcrumbs) -->
 <!-- Header -->
 <div class="site-header" aria-label="Header" role="Header">
-	$if(scctemplate.header.site_branding)$
-	$scctemplate.header.site_branding$
-	$else$
-	Suffolk County Council
-	$endif$
 
 	<div class="hidden-print">
-		<ul class="social-icons hidden-xs hidden-sm">
-			<li class="text"><a href="/planning-waste-and-environment/open-data/#content">Skip to main content</a></li>
-		</ul>
 		<div class="container header-menu">
 			<div class="row header-row">
-				<div class="col-xs-2 col-sm-1 hidden-md hidden-lg hamburger">
-					<a href="/planning-waste-and-environment/open-data/#" title="Show Menu"
-						class="header-menu-button collapsed show-menu hidden-md hidden-lg" aria-controls="navbar"
-						aria-expanded="false" data-target="#navbar" data-toggle="collapse">
-						<i class="fa fa-bars"></i>
-						<p>MENU</p>
-					</a>
-				</div>
-
 				<div class="col-xs-8 col-sm-10 col-md-6 col-lg-8 site-logo">
 					<a href="/" title="Suffolk County Council">
 						<i class="sccicon sccicon-no-border sccicon-suffolk-county-council">
@@ -79,49 +62,12 @@ $endif$
 						</i>
 					</a>
 				</div>
-
-
-				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-
-
-					<form name="site-search" id="SCCSearchForm" enctype="application/x-www-form-urlencoded" method="get"
-						action="https://search.suffolk.gov.uk/" grole="form">
-						<div class="input-group">
-							<label for="SCCSearchForm" class="hidden">Search: </label>
-							<input type="text" class="form-control site-search" name="q"
-								aria-labelledby="SCCSearchForm">
-							<span class="input-group-btn">
-								<button class="btn scc-red-btn" name="action_results" type="submit">
-									<p>Search</p>
-								</button>
-							</span>
-						</div>
-					</form>
-
-				</div>
-
 			</div>
 		</div>
 	</div>
 </div>
 
-</div>
-
-<!-- Elements included before the body -->
-<!-- Includes Bootstrap / default RStudio navbar -->
-$if(include-before)$
-<div class="ds_wrapper">
-	$for(include-before)$
-	$include-before$
-	$endfor$
-</div>
-$endif$
-
-
 </header>
-
-
-
 
 <body>
 	<div class="container page-content">
