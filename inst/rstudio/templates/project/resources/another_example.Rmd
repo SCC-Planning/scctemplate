@@ -1,5 +1,5 @@
 ---
-title: "Example Page"
+title: "Another example Page"
 author: "`r as.character(Sys.info()[7])`"
 date: "`r Sys.Date()`"
 scctemplate:
@@ -9,7 +9,7 @@ scctemplate:
     breadcrumb_trail:
       - href: "index.html"
         text: "Home"
-      - text: "Example Page"
+      - text: "Another example Page"
     toc:
       sticky: false
       numbered: false

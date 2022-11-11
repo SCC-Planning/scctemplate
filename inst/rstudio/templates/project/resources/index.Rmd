@@ -1,8 +1,11 @@
 ---
-title: "Home"
-description: "Your website's homepage"
-author: "`r as.character(Sys.info()[7])`"
+title: "Example Website Homepage"
 scctemplate:
+  index:
+    - href: "example.html"
+      text: "Example Page"
+    - href: "another_example.html"
+      text: "Another example page"
   header:
     site_branding: "Suffolk County Council"
   navigation:
@@ -11,8 +14,19 @@ scctemplate:
   seo:
     description: "SEO (search engine optimisation) description"
     keywords: "SEO, keywords, comma, separated"
+toc: false
 ---
 
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+# Instructions:
+# All you need to edit here is:
+  # - The title of your website
+  # - The index, make sure you reference all of your pages
+  # - OPTIONAL: add an author: or authors: section.
+  # - OPTIONAL: add seo descriptions.
 ```
+
+# This is the homepage
+It looks different from other pages. A homepage
