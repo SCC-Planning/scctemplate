@@ -17,6 +17,10 @@ HTML documents and websites.
 The design and styling of the template is based on the [Suffolk County
 Council Website](https://www.suffolk.gov.uk/).
 
+This package provides an R Markdown template. If you were looking for
+SCC styled graphic output, see
+[sccthemes](https://github.com/thomaszwagerman/sccthemes).
+
 ## Acknowledgements
 
 This package was heavily based on
