@@ -1,4 +1,5 @@
 name: "Example Suffolk County Council Website"
+output_dir: "docs"
 title-prefix: "suffolk.gov.uk"
 output:
   html_document:
