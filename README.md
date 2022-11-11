@@ -57,7 +57,7 @@ template files to your project folder:
 2.  Copy and run the following code:
 
 ``` r
-sgtemplates::import_template_files()
+scctemplates::import_template_files()
 ```
 
 3.  Instruct Knitr to use the template, by adding the following argument
