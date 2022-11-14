@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 
 The goal of `scctemplate` is to provide R markdown templates for data analysts working for Suffolk County Council. `scctemplate` lets you use RStudio to quickly produce professional, accessible, County Council branded HTML documents and websites.
 
-<img src="inst/figures/markdown-example.png"/, align = "centre">
+<img src="inst/figures/markdown-example.png", align = "centre"/>
 
 
 There is a full template website hosted [here](https://scc-planning.github.io/scctemplate-example-site/index.html.).
