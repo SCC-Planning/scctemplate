@@ -9,15 +9,23 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-The goal of scctemplate is to provide R markdown templates for data
+The goal of `scctemplate` is to provide R markdown templates for data
 analysts working for Suffolk County Council. `scctemplate` lets you use
 RStudio to quickly produce professional, accessible, County Council
 branded HTML documents and websites.
 
+\<img src=“inst/figures/markdown-example.png”/, align = “centre”\>
+
+There is a full template website hosted
+[here](https://scc-planning.github.io/scctemplate-example-site/index.html.).
+
+The `sccthemes` cookbook has also been built using this template, that
+can be found [here](https://scc-planning.github.io/scc-cookbook/).
+
 The design and styling of the template is based on the [Suffolk County
 Council Website](https://www.suffolk.gov.uk/). Please note a new Suffolk
-County Council is launching after (but not necessarily on) the **5th of
-December**. This template will follow suit shortly after.
+County Council Website is launching after (but not necessarily on) the
+**5th of December**. This template will follow suit shortly after.
 
 This package provides an R Markdown template. If you were looking for
 SCC styled graphic output, see
@@ -154,3 +162,11 @@ content produced using `sgtemplates` is assumed to be publicly available
 under the [Open Government Licence
 v3.0](http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/),
 except for graphic assets and where otherwise stated. © Crown Copyright.
+
+## Contributions
+
+This repository is very much a work in progress, and likely will be
+until the new website is launched.
+
+Any feedback, contributions and pull requests would be greatly
+appreciated!
