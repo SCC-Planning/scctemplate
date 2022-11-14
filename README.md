@@ -17,7 +17,7 @@ branded HTML documents and websites.
 <img src="inst/figures/markdown-example.png"/>
 
 There is a full template website hosted
-[here](https://scc-planning.github.io/scctemplate-example-site/index.html.).
+[here](https://scc-planning.github.io/scctemplate-example-site/index.html).
 
 The `sccthemes` cookbook has also been built using this template, that
 can be found [here](https://scc-planning.github.io/scc-cookbook/).
@@ -70,7 +70,7 @@ template files to your project folder:
 2.  Copy and run the following code:
 
 ``` r
-scctemplates::import_template_files()
+scctemplate::import_template_files()
 ```
 
 3.  Instruct Knitr to use the template, by adding the following argument
@@ -105,11 +105,16 @@ a good starting point. The guidance for building a website using
 `distill` (another package with a different template style), is very
 intuitive [too.](https://rstudio.github.io/distill/website.html)
 
+### Github Pages Integration
+
 Your website output will be stored in a `/docs` folder, to make
 deployment to Github Pages as seamless as possible. For more information
 on how to deploy your site to Github Pages, see this [Github Resources
 Tutorial on Github
 Pages](https://resources.github.com/github-and-rstudio/).
+
+If you want your files to be stored elsewhere, this can be changes in
+the \_site.yml file.
 
 ### Updating `scctemplate`
 
