@@ -14,7 +14,7 @@ analysts working for Suffolk County Council. `scctemplate` lets you use
 RStudio to quickly produce professional, accessible, County Council
 branded HTML documents and websites.
 
-\<img src=“inst/figures/markdown-example.png”, align=“center”/\>
+<img src="inst/figures/markdown-example.png"/>
 
 There is a full template website hosted
 [here](https://scc-planning.github.io/scctemplate-example-site/index.html.).
