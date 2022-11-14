@@ -15,7 +15,9 @@ RStudio to quickly produce professional, accessible, County Council
 branded HTML documents and websites.
 
 The design and styling of the template is based on the [Suffolk County
-Council Website](https://www.suffolk.gov.uk/).
+Council Website](https://www.suffolk.gov.uk/). Please note a new Suffolk
+County Council is launching after (but not necessarily on) the **5th of
+December**. This template will follow suit shortly after.
 
 This package provides an R Markdown template. If you were looking for
 SCC styled graphic output, see
@@ -28,6 +30,8 @@ This package was heavily based on, and in many places a 1:1 copy of,
 developed by Miles Drake and Nick Fanton. Contains public sector
 information licensed under the [Open Government Licence
 v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/).
+This template would not have been possible without their repository as
+an excellent example.
 
 This package has been trimmed down from `sgtemplates` where possible.
 The files in `R/` have been adapted slightly.
