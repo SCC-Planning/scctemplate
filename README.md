@@ -11,8 +11,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 The goal of scctemplate is to provide R markdown templates for data
 analysts working for Suffolk County Council. `scctemplate` lets you use
-RStudio to quickly produce professional, accessible, Government-branded
-HTML documents and websites.
+RStudio to quickly produce professional, accessible, County Council
+branded HTML documents and websites.
 
 The design and styling of the template is based on the [Suffolk County
 Council Website](https://www.suffolk.gov.uk/).
@@ -23,7 +23,7 @@ SCC styled graphic output, see
 
 ## Acknowledgements
 
-This package was heavily based on
+This package was heavily based on, and in many places a 1:1 copy of,
 [sgtemplates](https://github.com/DataScienceScotland/sgtemplates),
 developed by Miles Drake and Nick Fanton. Contains public sector
 information licensed under the [Open Government Licence
@@ -32,9 +32,10 @@ v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
 This package has been trimmed down from `sgtemplates` where possible.
 The files in `R/` have been adapted slightly.
 
-Everything under the `inst/` folder is unique to this packages - this
-includes a `css/` folder copied from the SCC website. The
-`_template.html` file has been rewritten specifically for this package.
+Everything under the `inst/` folder has been replaced for this
+packages - this includes a `css/` folder copied from the SCC website.
+The `_template.html` file has been rewritten specifically for this
+package.
 
 ## Installation
 
@@ -79,13 +80,24 @@ together by a navigation bar and a simple site structure – in RStudio:
 3.  Select “Suffolk County Council Website”;
 4.  Enter the directory that your website will be saved to. Choose “OK”.
 
+<img src="inst/figures/create-scc-website-example.png"/>
+
 Your chosen directory will be populated with example R markdown files.
 It will also have a \_site.yml file, which contains the configuration
 and metadata for your website.
 
-For more information on authoring websites with R markdown, please read
-the [documentation for R markdown’s site
-generator](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html).
+For more information on authoring websites with R markdown, the
+[documentation for R markdown’s site
+generator](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html) is
+a good starting point. The guidance for building a website using
+`distill` (another package with a different template style), is very
+intuitive [too.](https://rstudio.github.io/distill/website.html)
+
+Your website output will be stored in a `/docs` folder, to make
+deployment to Github Pages as seamless as possible. For more information
+on how to deploy your site to Github Pages, see this [Github Resources
+Tutorial on Github
+Pages](https://resources.github.com/github-and-rstudio/).
 
 ### Updating `scctemplate`
 
@@ -103,6 +115,27 @@ These will be fully documented in time. At present, the supported
 arguments can be found in the YAML block of a newly-generated
 `scctemplate` R markdown document or website, under the parent YAML
 argument `scctemplate`.
+
+Here is an example of what you will find in the imported documents:
+
+``` yaml
+---
+title: "Example Page"
+author: "zwagt"
+date: "2022-11-14"
+scctemplate:
+  header:
+    site_branding: "Suffolk County Council"
+  navigation:
+    breadcrumb_trail:
+      - href: "index.html"
+        text: "Home"
+      - text: "Example Page"
+    toc:
+      sticky: false
+      numbered: false
+---
+```
 
 ## License
 
