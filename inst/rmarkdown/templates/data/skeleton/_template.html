@@ -21,6 +21,10 @@
 	$for(author-meta)$
 	<meta name="author" , content="$authout-meta$">
 	$endfor$
+	
+	$if(date-meta)$
+  <meta name="date" content="$date-meta$">
+  $endif$
 
 	<!-- RStudio's default scripts and style sheets -->
 	$for(header-includes)$
