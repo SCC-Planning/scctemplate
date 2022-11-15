@@ -2,9 +2,16 @@ Package: scctemplate
 Title: R Markdown Templates for Data Analysts at Suffolk County Council
 Version: 0.1.0
 Authors@R: 
-    person("Thomas", "Zwagerman", email = "thomas.zwagerman@suffolk.gov.uk",
-    role = c("aut", "cre"))
-Description: R markdown templates for data analysts working at the Suffolk County Council. Inspired by {sgtemplates}..
+  c(person(given = "Thomas",
+         family = "Zwagerman",
+         role = c("aut", "cre"),
+         email = "thomas.zwagerman@suffolk.gov.uk"),
+  person(given = "Miles",
+         family = "Drake",
+         role = c("cph"),
+         comment = "Author of included sgtemplates library")
+  )
+Description: R markdown templates for data analysts working at the Suffolk County Council. Inspired by {sgtemplates}.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
