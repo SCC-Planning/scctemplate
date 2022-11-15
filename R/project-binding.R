@@ -5,6 +5,7 @@
 #' @param path the path where the website goes.
 site_skeleton <- function(path) {
   path <- normalise_path(path)
+  package_name <- "scctemplate"
 
   # ensure directory exists
   dir.create(path, recursive = TRUE, showWarnings = FALSE)

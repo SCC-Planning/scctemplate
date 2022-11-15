@@ -4,6 +4,7 @@
 #'
 #' @export
 import_template_files <- function(target_path = NULL) {
+  package_name <- "scctemplate"
 
   # If target path is not defined, use the current working directory
   if (is.null(target_path)) {

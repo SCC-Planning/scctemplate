@@ -7,6 +7,8 @@
 
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Codecov test
+coverage](https://codecov.io/gh/SCC-Planning/scctemplate/branch/main/graph/badge.svg)](https://app.codecov.io/gh/SCC-Planning/scctemplate?branch=main)
 <!-- badges: end -->
 
 The goal of `scctemplate` is to provide R markdown templates for data
@@ -139,7 +141,7 @@ Here is an example of what you will find in the imported documents:
 ---
 title: "Example Page"
 author: "zwagt"
-date: "2022-11-14"
+date: "2022-11-15"
 scctemplate:
   header:
     site_branding: "Suffolk County Council"
